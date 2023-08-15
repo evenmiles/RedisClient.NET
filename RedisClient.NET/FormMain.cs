@@ -49,8 +49,6 @@ namespace RedisClient.NET
                 buttonConnect.Text = "Desconectar";
                 GetRedisKeys();
             }
-            //var db = redis.GetDatabase();
-            //await db.StringSetAsync($"Prueba{DateTime.Now:yyyyMMddHHmm} XXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", $"Contenido Prueba {DateTime.Now:yyyyMMddHHmm}");           
         }
 
         private void GetRedisKeys()
@@ -74,7 +72,7 @@ namespace RedisClient.NET
             {
                 return;
             }
-            var r = MessageBox.Show($"¿Desea eliminar las {rows.Count} claves seleccionadas?", "Eliminar claves", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+            var r = MessageBox.Show($"Â¿Desea eliminar las {rows.Count} claves seleccionadas?", "Eliminar claves", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
             if (r != DialogResult.OK)
             {
                 return;
